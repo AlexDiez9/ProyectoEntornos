@@ -1,0 +1,192 @@
+Base: formula 1
+
+***(PARA LA PARTE DEL TRABAJO DE 1ºDE DAW -> CADILLAC NO ENTRA)***
+
+Aplicacion parecida al La Liga Fantasy, donde se puede hacer una liga con tus amigos, 
+de maximo 10 personas, donde cada uno, escoje una scuderia a traves de dinero generado
+tras cada carrera. 
+Habra un sistema de pujas donde comprar pilotos la semana previa al gran premio. 
+Tambien habra un sistema de pujas para comprar coches.
+(se pueden comprar de lunes a jueves, despues del viernes se reinicia)
+
+
+El sistema de puntuaje es el siguiente:
+
+Por piloto:
+En libres: mas de 20 vueltas = 5 puntos
+
+En libres 1: por encima del top 10 = 0,5 puntos
+			 por encima del top 8  = 0,75 puntos
+			 por encima del top 5  = 1 puntos
+			 por encima del top 3  = 1,5 puntos
+			 por encima del top 1  = 2 puntos
+
+En libres 2: por encima del top 11 = 0,5 puntos
+			 por encima del top 9  = 0,75 puntos
+			 por encima del top 6  = 1 puntos
+			 por encima del top 4  = 1,5 puntos
+			 por encima del top 2  = 2 puntos
+
+En libres 3: por encima del top 12 = 0,5 puntos
+			 por encima del top 10 = 0,75 puntos
+			 por encima del top 7  = 1 puntos
+			 por encima del top 5  = 1,5 puntos
+			 por encima del top 3  = 2 puntos
+
+En crono: por encima del top 16 = 1 punto
+		  por encima del top 12 = 2 puntos
+		  por encima del top 10 = 3 puntos
+		  por encima del top 8  = 4 puntos
+		  por encima del top 5  = 5 puntos
+		  por encima del top 3  = 7 puntos
+		  por encima del top 1  = 10 puntos
+
+En carrera: por encima del top 10 = 3 puntos
+			por encima del top 8  = 4 puntos
+			por encima del top 5  = 6 puntos
+			por encima del top 3  = 10 puntos
+			por encima del top 2  = 12 puntos
+			por encima del top 1  = 15 puntos
+						
+			mas de 3 adelantamientos = 1 punto
+			mas de 5 adelantamientos = 3 puntos
+			mas de 7 adelantamientos = 5 puntos
+						
+			mejora de posicion 1 = 1 punto
+			mejora de posicion 2 = 2 puntos
+			mejora de posicion 3 = 3 puntos
+			asi hasta 19
+						
+			perdida de posicion 1 = -1 punto
+			asi hasta 19
+						
+			accidente menor 	   		= -3 puntos
+			accidente mayor 	   		= -7 puntos
+			retirado (DNF)  	   		= -15 puntos
+			salida de track limits 		= -0,5 puntos por vuelta
+			provocar banera roja 		= -10 puntos
+			provocar banera amarilla	= -1 punto
+			provocar safety car			= -7 puntos
+			provocar virtual safety car = -3 puntos
+
+Por escuderia: McLaren  = Lando   -> por carrera = por top: 15	
+						  Oscar   -> por carrera = por top: 4 - vitual safety car: -3, perdida de posicion: -7
+						  
+			   Mercedes = Russell -> por carrera = por top: 10, mejora de posicion: 1
+						  Kimi	  -> por carrera = por top: 6, mejora de posicion: 	12, por adelantamiento: 3 - bandera amarilla: -1
+			   
+			   Redbull  = Max	  -> por carrera = por top: 10, mejora de posicion: 1
+			   
+			   Ferrari  = 
+			   
+			   Willams  = 
+			   
+			   Haas		= 
+			   
+			   Aston	= 
+			   
+			   Audi		= 
+			   
+			   Alpine	= 
+			   
+			   Cadillac	= x
+			   
+			   
+			   
+
+
+opciones:
+- carreras (circuitos) (crono, sprint, domingo, libres) (boxes) (sectores) (DRS)
+		   (safety car, banderas rojas y amarillas, y virtual safety) (track limits)
+- scuderia (equipos) 
+- marketing (prensa) 
+- camaras (punto de vista) 
+- pitline (jefe de equipo)
+- personas (corerores)
+- preguntas (quiz)
+- caledario
+
+
+
+
+
+- carreras, scuderia, personas, calendario , preguntas
+
+
+CARRERAS
+Putuaje:
+1º.  25 p
+2º.  18 p
+3º.  15 p
+4º.  12 
+5º.  10
+6º.  8
+7º.  6
+8º.  4
+9º.  2
+10º. 1
+resto. 👍 (0)
+
+
+SCUDERIAS:
+
+- Ferrari					- Toyota / Haas
+- McLaren					- Audi / Kick Sauber
+- Mercedes					- RB
+- Redbull					- Willams
+- Aston Martin				- Alpine 
+- Cadillac
+
+
+PERSONAS:
+
+- Ferrari					- Haas / Toyota
+ · Charles Leclerc			 · Oliver Beerman
+ · Lewis Hamilton			 · Esteban Ocon
+- McLaren					- Audi
+ · Lando Norris				 · Nico Hulkenberg
+ · Oscar Piastri			 · Gabriel Bortoleto
+- Mercedes					- RB
+ · George Russell			 · Isac Hadjar
+ · Kimi Antonelli			 · Liam Lawson
+- Redbull					- Willams
+ · Max Verstappen			 · Alexander Albon
+ · Yuki Tsunoda				 · Carlos Sainz
+- Aston Martin				- Renault
+ · Fernando Alfonso			 · Pierre Gasly
+ · Lance Stroll				 · Jack Doohan (o Franco Colapinto)
+- Cadillac (todavia no se sabe)
+ · Sergio Pérez (checo)
+ · Pato Owar 
+ 
+ 
+CALENDARIO:
+
+- Australia				14 - 16 marzo
+- China (sprin)			21 - 23 marzo
+- Japon 				 4 - 6  abril
+- Bahrein				11 - 13 abril
+- Arabia Saudi			18 - 20 abril
+- Miami (sprin)			 2 - 4  mayo
+- Imola					16 - 18 mayo
+- Monaco				23 - 25 mayo
+- ESPAÑA				30 - 1  mayo - junio
+- Canada				13 - 15 junio
+- Austria				27 - 29 junio
+- Reino Unido			 4 - 6  julio
+- Belgica (sprin)		25 - 27 julio
+- Hungria				 1 - 3  agosto
+- Paises Bajos			29 - 31 agosto
+- Monza					 5 - 7  septiembre
+- Azerbaiyán			19 - 21 septiembre
+- Singapur				 3 - 5  octubre
+- Austin (sprin)		17 - 19 octubre
+- Mexico				24 - 26 octubre
+- Brasil (sprin)		 7 - 9  noviembre
+- Las Vegas				20 - 22 noviembre
+- Qatar (sprin)			28 - 30 noviembre
+- Abu Dhabi				 5 - 7  diciembre
+
+
+
+PREGUNTAS:
