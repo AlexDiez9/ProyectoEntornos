@@ -1,0 +1,1 @@
+/* fichero para JS general*/
