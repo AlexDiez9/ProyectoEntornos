@@ -1,16 +1,220 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>Inicio</title>
+    <link rel="stylesheet" href="estilos/inicio.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h3 {
+            color: #333;
+        }
+
+        a {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        .cuenta {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .cuenta:hover {
+            background-color: #1e7e34;
+        }
+
+        /* Fondo oscuro (modal) */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.5);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        /* Contenido del formulario */
+        .formulario {
+            background-color: white;
+            padding: 30px 20px 20px;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #17a2b8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #117a8b;
+        }
+
+        /* Botón de cerrar */
+        .cerrar {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            color: #aaa;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .cerrar:hover {
+            color: #333;
+        }
+    </style>
 </head>
 <body>
     <h1>Inicio</h1>
+
     <h3>Opciones de usuario</h3>
     <a href="usuario/Calendario.html">Calendario</a>
     <a href="usuario/Carreras.html">Carreras</a>
     <a href="usuario/Pilotos.html">Pilotos</a>
     <a href="usuario/Scuderias.html">Scuderias</a>
+
     <h3>Opciones de usuario de alta</h3>
-    <a href="alta/InicioLiga.html">Inicio de la Liga</a>
+    <a href="alta/InicioLiga.html" id="irALiga">Inicio de la Liga</a>
+
+    <div class="cuenta" id="mostrarRegistro">Registrarse</div>
+    <button type="button" class="cuenta" id="mostrarLogin">Iniciar sesión</button>
+
+    <!-- Modal Registro -->
+    <div class="modal" id="modalRegistro">
+        <div class="formulario">
+            <span class="cerrar" onclick="cerrarModal()">×</span>
+            <form>
+                <label>*Nombre de usuario
+                    <input type="text" maxlength="15" required>
+                </label>
+                <label>*Correo electrónico
+                    <input type="email" required>
+                </label>
+                <label>*Contraseña
+                    <input type="password" required>
+                </label>
+                <button type="submit">Registrarme</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Login -->
+    <div class="modal" id="modalLogin">
+        <div class="formulario">
+            <span class="cerrar" onclick="cerrarModal()">×</span>
+            <form id="formLogin">
+                <label>Nombre de usuario
+                    <input type="text" required>
+                </label>
+                <label>Contraseña
+                    <input type="password" required>
+                </label>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const btnRegistro = document.getElementById("mostrarRegistro");
+        const btnLogin = document.getElementById("mostrarLogin");
+        const modalRegistro = document.getElementById("modalRegistro");
+        const modalLogin = document.getElementById("modalLogin");
+        const irALiga = document.getElementById("irALiga");
+
+        let redirigirALiga = false;
+
+        btnRegistro.addEventListener("click", () => {
+            modalRegistro.style.display = "flex";
+            modalLogin.style.display = "none";
+        });
+
+        btnLogin.addEventListener("click", () => {
+            modalLogin.style.display = "flex";
+            modalRegistro.style.display = "none";
+        });
+
+        irALiga.addEventListener("click", (e) => {
+            e.preventDefault();
+            redirigirALiga = true;
+            modalLogin.style.display = "flex";
+            modalRegistro.style.display = "none";
+        });
+
+        document.getElementById("formLogin").addEventListener("submit", function(e) {
+            e.preventDefault();
+            cerrarModal();
+            if (redirigirALiga) {
+                window.location.href = "alta/InicioLiga.html";
+            } else {
+                alert("Sesión iniciada correctamente.");
+            }
+        });
+
+        function cerrarModal() {
+            modalRegistro.style.display = "none";
+            modalLogin.style.display = "none";
+        }
+
+        window.addEventListener("click", function(e) {
+            if (e.target === modalRegistro || e.target === modalLogin) {
+                cerrarModal();
+            }
+        });
+    </script>
 </body>
 </html>
+

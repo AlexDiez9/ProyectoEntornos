@@ -1,14 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>Pilotos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h3 {
+            color: #222;
+            margin-bottom: 15px;
+        }
+
+        .menu-principal, .acciones, .volver {
+            margin-bottom: 25px;
+        }
+
+        .menu-principal a,
+        .acciones a,
+        .volver a {
+            display: inline-block;
+            margin: 5px 10px 5px 0;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            user-select: none;
+        }
+
+        /* Menú principal: azul */
+        .menu-principal a {
+            background-color: #007BFF;
+            color: white;
+        }
+        .menu-principal a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Acciones */
+        .acciones a {
+            color: white;
+        }
+        .acciones a.liga {
+            background-color: #6f42c1;
+        }
+        .acciones a.liga:hover {
+            background-color: #5a3291;
+        }
+        .acciones a.registro {
+            background-color: #28a745;
+        }
+        .acciones a.registro:hover {
+            background-color: #1e7e34;
+        }
+        .acciones a.login {
+            background-color: #ffc107;
+            color: black;
+        }
+        .acciones a.login:hover {
+            background-color: #e0a800;
+        }
+
+        /* Botón volver gris */
+        .volver a {
+            background-color: #6c757d;
+            color: white;
+        }
+        .volver a:hover {
+            background-color: #5a6268;
+        }
+    </style>
 </head>
 <body>
     <h3>Opciones de usuario</h3>
-    <a href="usuario/Calendario.html">Calendario</a>
-    <a href="usuario/Carreras.html">Carreras</a>
-    <a href="usuario/Scuderias.html">Scuderias</a>
+    <div class="menu-principal">
+        <a href="usuario/Scuderias.html">Scuderias</a>
+    </div>
 
-    <p>Volver al <a href="../Inicio.html">inicio</a></p>
+    <h3>Acciones de la Liga</h3>
+    <div class="acciones">
+        <a href="../alta/InicioLiga.html" class="liga">Entrar a la liga</a>
+        <a href="../Inicio.html" class="registro">Registrarse</a>
+        <a href="../Inicio.html" class="login">Iniciar sesión</a>
+    </div>
+
+    <div class="volver">
+        <a href="../Inicio.html">Volver al inicio</a>
+    </div>
 </body>
 </html>
